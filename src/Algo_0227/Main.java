@@ -24,7 +24,7 @@ public class Main{
         if(b == 0){
             return a;
         }else{
-            return goc(b, a % b);
+            return gcd(b, a % b);
         }
     }
 }
