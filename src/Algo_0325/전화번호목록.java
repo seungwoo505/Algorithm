@@ -21,7 +21,7 @@ public class 전화번호목록 {
                 node.trie.putIfAbsent(c, new TrieNode());
                 node = node.trie.get(c);
             }
-            node.isEnd = true; //끝난게 있는지 확인
+            node.isEnd = true; //끝났다고 표시
         }
 
         boolean select(String number){
