@@ -32,7 +32,6 @@ public class 나무자르기 {
                 if (t > mid)
                     tree += t - mid;
             }
-
             if (tree >= M) {
                 result = mid;
                 min = mid + 1;
