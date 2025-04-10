@@ -1,22 +1,23 @@
-package Algo_0331;
+package Algo_0404;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FourSquares {
+public class nX2타일림2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
 
-        int answer = 0;
+        int[] dp = new int[N + 1];
+        if(N >= 1)dp[1] = 1;
+        if(N >= 2)dp[2] = 3;
 
-        while(0 < N){
-            N = N - (int)Math.pow((int)Math.floor(Math.sqrt(N)), 2);
-            answer++;
+        for(int n = 3; n <= N; n++){
+            dp[n] = (dp[n - 1] + (dp[n - 2] * 2)) % 10007;
         }
 
-        System.out.println(answer);
+        System.out.println(dp[N]);
     }
 }
