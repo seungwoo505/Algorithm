@@ -1,0 +1,1 @@
+console.log(Number(require('fs').readFileSync('/dev/stdin', 'utf8').toString().trim()) % 2 === 0 ? 2 : 1);
